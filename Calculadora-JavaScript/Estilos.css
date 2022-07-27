@@ -1,0 +1,90 @@
+* {
+  font-family: "Frauses", serif;
+  color: #fff;
+}
+body {
+  margin: 0;
+  background-color: #224878;
+}
+.container {
+  /* para centar el contenido en nuestro contenedor*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*le da dimenciones al contenedor de 100% de la pagina*/
+  width: 100vw;
+  height: 100vh;
+}
+.Calculadora {
+  /*display grid nos permite armar una grilla para la colocacion de los botones */
+  display: grid;
+  /* grid-template-columns: repeat(4, 75px)
+   (nos permite crear columnas el valor repeat nos permite repetir la accion dentro de los parentesis ponemos la cantidad y el tamanio*/
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: 160px repeat(5, 75px);
+  /*grid-template-rows: 160px repeat(5, 75px)
+   (nos permite crear filas) el primer valor es para generar el alto total de nuestro display
+   el segundo seria para repetir en el numero (5) de filas la altura de 75px*/
+  background-color: #00916e;
+  padding: 15px;
+  border-radius: 32px;
+  /*box-shadow: 
+   1- nos da la sombra en el ejeX ,
+   2- nos da sombra el en ejeY,
+   3 - el blur ,
+   4 -el ultimo valor es el spreed ,
+   5- despues el color*/
+  box-shadow: 15px 10px 0px 5px #00000033;
+}
+button {
+  cursor: pointer;
+
+  margin: 5px;
+  padding: 0;
+
+  border-radius: 32px;
+
+  font-size: 1.5em;
+  border: none;
+  background-color: #00916e;
+  /*(5px eje x)
+  (5px eje Y)
+  (10px de blur)
+  (-3px spread-radius)
+  (#00000040 los primeros 6 numeros nos da el color los otros nos da la opacidad)
+  despues de la coma nos da una segunda sombra o argumento
+  las medidas negativas es por que la orientacion de la sombra va a ser para el otro lado de nuestro elemento*/
+  box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 10px -3px #00ffc11f;
+}
+button:active {
+  background-color: #006f54;
+}
+button:focus {
+  outline: none;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.display {
+  /*grid-column: 1/-1; nos permite que ocupe todo el ancho del contenedor*/
+  grid-column: 1/-1;
+
+  padding: 16px;
+
+  display: flex;
+  margin: 10px 10px 20px; /*nos da el margen del display con respecto al contenedor*/
+  flex-direction: column; /* nos permite que el contenido este uno abajo del otro*/
+  align-items: flex-end; /*pata que nos salga de la aprte derecha*/
+  background-color: #363636;
+  border-radius: 32px;
+  text-align: right;
+  justify-content: space-between;
+  word-break: break-all;
+  box-shadow: 0 0 0 10px #00000033;
+}
+#ValorActual {
+  font-size: 1.5em;
+}
+#ValorAnterior {
+  font-size: 2em;
+}

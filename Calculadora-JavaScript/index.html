@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="Estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculadoraJs</title>
+    <script src="Calculadora.js" type="text/javascript"></script>
+    <script src="Display.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <!--cuerpo de la pagina-->
+    <div class="container">
+        <!--contenedor principal de la calculadora para poder centarla en el medio de la pagina-->
+
+        <div class="Calculadora">
+            <!--cuerpo de la calculadora-->
+
+            <div class="display">
+                <!--pantallas donde se van a detallar las operaciones visualmente-->
+
+                <div id="ValorActual"></div><!--primer valor que ingresemos-->
+                <div id="ValorAnterior"></div><!--el segundo valor por el cual queramos nosotros hacer la operacion -->
+
+            </div>
+
+            <button class="col-2" onclick="display.borrarTodo()">C</button>
+            <button onclick="display.borrar()">&larr;</button><!--agregamos directamente la funcion que creamos al boton onclick = 'display.borrar()'-->
+            <button class="operador" value="dividir">%</button>
+            <button class="numero">7</button>
+            <button class="numero">8</button>
+            <button class="numero">9</button>
+            <button class="operador" value="multiplicar">X</button>
+            <button class="numero">4</button>
+            <button class="numero">5</button>
+            <button class="numero">6</button>
+            <button class="operador" value="restar">-</button>
+            <button class="numero">1</button>
+            <button class="numero">2</button>
+            <button class="numero">3</button>
+            <button class="operador" value="sumar">+</button>
+            <button class="numero col-2">0</button>
+            <button class="numero">.</button>
+            <button class="operador" value="igual">=</button>
+
+        </div>
+    </div>
+    
+</body>
+</html>
